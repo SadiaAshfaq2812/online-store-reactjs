@@ -1,7 +1,7 @@
 steps:
 
 # Build the container image
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/.docker/docker'
   args: ['build', '-t', 'gcr.io/thesisproject1859/online-store-reactjs', '.']
 
 # Push the container image to Container Registry
