@@ -27,15 +27,15 @@ FROM node:12
 WORKDIR /app
 
 
-COPY . ./
+# COPY . ./
 
-FROM fholzer/nginx-brotli:v1.12.2
+# FROM fholzer/nginx-brotli:v1.12.2
 
-WORKDIR /etc/nginx
+# WORKDIR /etc/nginx
 
-ADD nginx.conf /etc/nginx/nginx.conf
+# ADD nginx.conf /etc/nginx/nginx.conf
 
-COPY --from=build /app/build /usr/share/nginx/html
+# COPY --from=build /app/build /usr/share/nginx/html
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
